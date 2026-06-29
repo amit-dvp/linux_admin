@@ -1,0 +1,7 @@
+FROM ubuntu:24.04
+
+# add from local directory
+# ADD ./xv6-11 /xv6-11
+RUN apt-get -qq update && \
+# --no-install-recommends reduces the Image size by almost 15%,
+# but in our case git needs --reinstall ca-certificates to work 
