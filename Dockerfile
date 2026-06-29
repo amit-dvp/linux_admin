@@ -10,11 +10,8 @@ FROM ubuntu:24.04
 # add from local directory
 ADD . /linux_learn
 RUN apt-get update -y
+# this operation takes many time , but MUST be done
 RUN apt-get install -y texlive-full
-
-
-#RUN sudo apt install texlive-full -y
-#RUN pdflatex myfile.tex linux_learn.pdf -y
 
 
 # --no-install-recommends reduces the Image size by almost 15%,
